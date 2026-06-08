@@ -29,6 +29,13 @@ $rows = $stmt->fetchAll();
     <h1>Результати пошуку за часовим періодом</h1>
     <p><b>Період:</b> <?= htmlspecialchars($yearFrom) ?> - <?= htmlspecialchars($yearTo) ?></p>
 
+    <form action="pdf_export.php" method="get">
+        <input type="hidden" name="type" value="period">
+        <input type="hidden" name="year_from" value="<?= htmlspecialchars($yearFrom) ?>">
+        <input type="hidden" name="year_to" value="<?= htmlspecialchars($yearTo) ?>">
+        <button type="submit" class="pdf-button">Завантажити PDF</button>
+    </form>
+
     <?php if ($rows): ?>
         <table>
             <tr>

@@ -26,6 +26,12 @@ $rows = $stmt->fetchAll();
     <h1>Результати пошуку за видавництвом</h1>
     <p><b>Видавництво:</b> <?= htmlspecialchars($publisher) ?></p>
 
+    <form action="pdf_export.php" method="get">
+        <input type="hidden" name="type" value="publisher">
+        <input type="hidden" name="publisher" value="<?= htmlspecialchars($publisher) ?>">
+        <button type="submit" class="pdf-button">Завантажити PDF</button>
+    </form>
+
     <?php if ($rows): ?>
         <table>
             <tr>

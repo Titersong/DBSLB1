@@ -1,6 +1,6 @@
 <?php
-$host = '127.0.1.17';
-$db   = 'LB1';
+$host = '127.0.0.1';
+$db   = 'lb_pdo_library';
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';

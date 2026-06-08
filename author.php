@@ -37,6 +37,12 @@ $authorName = $rows ? $rows[0]['AUTHOR_NAME'] : 'Невідомий автор';
     <h1>Результати пошуку за автором</h1>
     <p><b>Автор:</b> <?= htmlspecialchars($authorName) ?></p>
 
+    <form action="pdf_export.php" method="get">
+        <input type="hidden" name="type" value="author">
+        <input type="hidden" name="author_id" value="<?= htmlspecialchars($authorId) ?>">
+        <button type="submit" class="pdf-button">Завантажити PDF</button>
+    </form>
+
     <?php if ($rows): ?>
         <table>
             <tr>

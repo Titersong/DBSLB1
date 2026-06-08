@@ -98,3 +98,14 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.pdf-button {
+    display: block;
+    width: 220px;
+    margin: 15px auto;
+    background: #333333;
+}
+
+.pdf-button:hover {
+    background: #111111;
+}
